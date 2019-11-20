@@ -24,4 +24,11 @@ export class PlaygroundComponent implements OnInit {
       'text-danger': true
     };
   }
+
+  getStyleConfigurationObject() {
+    return {
+      'font-weight': 'bold',
+      color: 'blue'
+    };
+  }
 }
