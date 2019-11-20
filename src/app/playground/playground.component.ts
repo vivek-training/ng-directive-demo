@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./playground.component.css']
 })
 export class PlaygroundComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  getCssString() {
+    return 'font-weight-bold';
   }
 
+  getCssStringArray() {
+    return ['font-weight-bold', 'text-success'];
+  }
+
+  getCssConfigurationObject() {
+    return {
+      'font-weight-bold': true,
+      'text-danger': true
+    };
+  }
 }
