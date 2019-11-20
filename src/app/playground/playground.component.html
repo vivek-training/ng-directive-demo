@@ -14,3 +14,19 @@
 <h4 [ngStyle]="getStyleConfigurationObject()">
   ngStyle: using configuration object
 </h4>
+
+<hr />
+<input
+  type="text"
+  class="form-control"
+  value="This is made readonly"
+  [readOnly]="true"
+/>
+
+<hr />
+<input
+  type="text"
+  class="form-control"
+  value="This is made disabled"
+  [disabled]="true"
+/>
