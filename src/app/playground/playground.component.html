@@ -30,3 +30,23 @@
   value="This is made disabled"
   [disabled]="true"
 />
+
+<hr />
+<h1 *ngIf="true; else block">Hello there!</h1>
+
+<ng-template #block>
+  <h2>This is else block</h2>
+</ng-template>
+
+<hr />
+<ul>
+  <li
+    *ngFor="
+      let city of ['Bengaluru', 'Chennai', 'Hyderabad', 'Mumbai'];
+      index as i;
+      first as f
+    "
+  >
+    {{ i }} >> {{ city }} >> {{ f ? 'First Element' : 'Not the first element' }}
+  </li>
+</ul>
