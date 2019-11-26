@@ -1,52 +1,7 @@
-<h3>Directives</h3>
+<h2 *appIfClone="status">General approach for a structural directive</h2>
 
 <hr />
 
-<h4 [ngClass]="getCssString()">ngClass variation 1: using string</h4>
-<h4 [ngClass]="getCssStringArray()">
-  ngClass variation 2: using array of string
-</h4>
-<h4 [ngClass]="getCssConfigurationObject()">
-  ngClass variation 3: using configuration object
-</h4>
-
-<hr />
-<h4 [ngStyle]="getStyleConfigurationObject()">
-  ngStyle: using configuration object
-</h4>
-
-<hr />
-<input
-  type="text"
-  class="form-control"
-  value="This is made readonly"
-  [readOnly]="true"
-/>
-
-<hr />
-<input
-  type="text"
-  class="form-control"
-  value="This is made disabled"
-  [disabled]="true"
-/>
-
-<hr />
-<h1 *ngIf="true; else block">Hello there!</h1>
-
-<ng-template #block>
-  <h2>This is else block</h2>
+<ng-template [appIfClone]="status">
+  <h2>Verbose approachfor a structural directive</h2>
 </ng-template>
-
-<hr />
-<ul>
-  <li
-    *ngFor="
-      let city of ['Bengaluru', 'Chennai', 'Hyderabad', 'Mumbai'];
-      index as i;
-      first as f
-    "
-  >
-    {{ i }} >> {{ city }} >> {{ f ? 'First Element' : 'Not the first element' }}
-  </li>
-</ul>
